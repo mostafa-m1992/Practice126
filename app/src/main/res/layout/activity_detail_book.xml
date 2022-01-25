@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailBookActivity"
+    android:background="@color/purple_500">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:id="@+id/toolbarDetail">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/book_name"
+            android:text="name book"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:id="@+id/cardView_img"
+        app:cardBackgroundColor="@color/purple_200"
+        app:cardCornerRadius="16dp"
+        android:layout_below="@id/toolbarDetail"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="8dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/imgDetail"
+            android:scaleType="centerCrop"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:cardElevation="-2dp"
+        app:cardCornerRadius="16dp"
+        android:layout_below="@id/toolbarDetail"
+        android:layout_toRightOf="@id/cardView_img"
+        android:layout_marginTop="112dp"
+        android:layout_marginLeft="-48dp"
+        android:layout_marginRight="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="56dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginRight="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="4dp"
+                android:text="description"
+                android:id="@+id/description"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/name_author"
+        android:layout_below="@id/cardView_img"
+        android:layout_margin="8dp"
+        android:text="author : "
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/published"
+        android:layout_below="@id/name_author"
+        android:layout_margin="8dp"
+        android:text="published at : "
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/genre"
+        android:layout_below="@id/published"
+        android:layout_margin="8dp"
+        android:text="genre : "
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:orientation="horizontal"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/cardView_img">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="4dp"
+            android:src="@drawable/ic_baseline_attach_money_24"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/txt_price_detail"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:text="29.99"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
